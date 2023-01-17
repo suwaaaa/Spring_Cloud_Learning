@@ -1,0 +1,23 @@
+{
+  "properties": [
+    {
+      "name": "web.file.path",
+      "type": "java.lang.String",
+      "description": "Description for web.file.path."
+    },
+    {
+      "name": "web.file.maxFileRequest",
+      "type": "java.lang.String",
+      "description": "Description for web.file.maxFileRequest."
+    },
+    {
+      "name": "web.file.limitSize",
+      "type": "java.lang.String",
+      "description": "Description for web.file.limitSize."
+    },
+    {
+      "name": "web.file.allowTypes",
+      "type": "java.lang.String",
+      "description": "Description for web.file.allowTypes."
+    }
+  ] }

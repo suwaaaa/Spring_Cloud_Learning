@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Consumer_Module" />
+        <module name="Eureka_Manager_Module" />
+        <module name="Eureka_Manager_Replicas_Module" />
+        <module name="Feign_Module" />
+        <module name="Hystrix_Module" />
+        <module name="Provider_Module" />
+        <module name="Provider_Replicas_Module" />
+        <module name="Zuul_API_Module" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Consumer_Module" target="1.8" />
+      <module name="Eureka_Manager_Module" target="1.8" />
+      <module name="Eureka_Manager_Replicas_Module" target="1.8" />
+      <module name="Feign_Module" target="1.8" />
+      <module name="Hystrix_Module" target="1.8" />
+      <module name="Java_Learning" target="1.8" />
+      <module name="Provider_Module" target="8" />
+      <module name="Provider_Replicas_Module" target="8" />
+      <module name="Zuul_API_Module" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

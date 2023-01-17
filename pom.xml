@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion><!--当前仅有的可以被Maven2&3同时支持的POM版本-->
+
+    <groupId>Javon_Lin</groupId><!--本地仓库中的路径-->
+    <artifactId>Java_IBM_Learning</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>Provider_Module</module>
+        <module>Consumer_Module</module>
+        <module>Eureka_Manager_Module</module>
+        <module>Hystrix_Module</module>
+        <module>Feign_Module</module>
+        <module>Eureka_Manager_Replicas_Module</module>
+        <module>Zuul_API_Module</module>
+        <module>Provider_Replicas_Module</module>
+    </modules>
+    <!--<packaging>pom</packaging>--><!--java -jar target/gs-uploading-files-0.1.0.jar-->
+
+    <properties>
+        <project.build.sourseEncoding>UTF-8</project.build.sourseEncoding>
+        <maven.compiler.sourse>1.8</maven.compiler.sourse>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <spring.cloud-version>Hoxton.SR8</spring.cloud-version><!-- Greenwich.SR3 -->
+        <spring.boot-version>2.3.2.RELEASE</spring.boot-version>
+        <spring.boot.starter.test-version>2.3.2.RELEASE</spring.boot.starter.test-version>
+        <spring.boot.start.web-version>2.3.2.RELEASE</spring.boot.start.web-version>
+        <spring.boot.devtools-version>2.3.2.RELEASE</spring.boot.devtools-version>
+        <log4j.version>1.2.17</log4j.version>
+        <logback-core.version>1.2.3</logback-core.version>
+        <junit.version>4.13.1</junit.version>
+        <lombok.version>1.18.12</lombok.version>
+
+        <mysql.connector-version>8.0.20</mysql.connector-version>
+        <spring.boot.mybatis.starter-version>2.1.4</spring.boot.mybatis.starter-version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-dependencies -->
+            <dependency>    <!-- Spring cloud dependencies -->
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud-version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-dependencies -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot-version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring.boot.starter.test-version}</version>
+                <scope>test</scope><!-- test-->
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring.boot.start.web-version}</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-devtools -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-devtools</artifactId>
+                <version>${spring.boot.devtools-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+            <!--日志测试-->
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                <version>${logback-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.connector-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${spring.boot.mybatis.starter-version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
