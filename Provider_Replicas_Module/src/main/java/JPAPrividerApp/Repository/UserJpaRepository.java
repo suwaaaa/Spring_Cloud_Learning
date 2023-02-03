@@ -31,9 +31,11 @@ public interface UserJpaRepository extends JpaRepository<User,Long> { //JpaRepos
     //nullif 在 expr1 的值不为 NULL的情况下都返回 expr1，否则返回 expr2
     List<User> queryUserThroughJPQLByUserName(@Param(value = "name") String name);
 
+
     @Query(value = "update User u set u.email = :email where u.id = :userId ")
     @Modifying //删除更新操作 要加@Modifying
     Integer updateUserEmailById(@Param(value = "email") String email, @Param(value = "userId") Long userId);
+
 
     @Query(value = "delete from User u where u.name = :name ")
     @Modifying //删除更新操作 要加@Modifying
