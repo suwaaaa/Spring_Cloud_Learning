@@ -1,4 +1,4 @@
-package com.JPAPrividerApp.Repository;
+package com.JPAPrividerApp.Repository.UserJpaManager;
 
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Component;

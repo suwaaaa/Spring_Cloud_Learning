@@ -1,8 +1,8 @@
 package com.JPAPrividerApp.Controller;
 
 import com.JPAPrividerApp.Entity.User;
-import com.JPAPrividerApp.Repository.UserEntityManagerRepository;
-import com.JPAPrividerApp.Repository.UserJpaRepository;
+import com.JPAPrividerApp.Repository.UserJpaManager.UserEntityManagerRepository;
+import com.JPAPrividerApp.Repository.UserJpaManager.UserJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

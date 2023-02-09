@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScans;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 
@@ -15,6 +16,7 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 @EnableEurekaClient
 @EnableGlobalMethodSecurity(prePostEnabled = true) //组件需要“org.springframework.security.configannotation”类型的bean。找不到的ObjectPostProcessor“”。
 @EnableScheduling // 启动类里面 @EnableScheduling开启定时任务，自动扫描
+@EnableAsync // 异步任务,启动类里面使用@EnableAsync注解开启功能，自动扫描
 public class JpaProvider02Application {  // Port: 9025
     public static void main(String[] args) {
         SpringApplication.run(JpaProvider02Application.class, args);

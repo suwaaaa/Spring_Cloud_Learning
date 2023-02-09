@@ -18,7 +18,6 @@ import javax.servlet.http.HttpServletRequest;
 public class MyFallBackFactory implements FallbackFactory<RequestService> {
 
 	public RequestService create(final Throwable cause) {
-		// TODO Auto-generated method stub
 		return new RequestService() {
 			public String helloString() {
 				System.out.println("远程服务helloString不可用时，暂时采用本地逻辑代替");

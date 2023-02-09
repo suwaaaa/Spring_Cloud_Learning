@@ -1,4 +1,4 @@
-package com.JPAPrividerApp.Repository;
+package com.JPAPrividerApp.Repository.UserJpaManager;
 
 import com.JPAPrividerApp.Entity.User;
 import org.springframework.data.domain.Page;
