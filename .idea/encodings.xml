@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Consumer_Module" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Eureka_Manager_Module" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Eureka_Manager_Replicas_Module" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Feign_Module" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Hystrix_Module" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Provider_Module" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Provider_Replicas_Mail_Module" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Provider_Replicas_Module" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring_Boot_Admin_Module" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Zuul_API_Module" charset="UTF-8" />
+  </component>
+</project>

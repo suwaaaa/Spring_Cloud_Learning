@@ -9,7 +9,9 @@
       <module fileurl="file://$PROJECT_DIR$/Hystrix_Module/Hystrix_Module.iml" filepath="$PROJECT_DIR$/Hystrix_Module/Hystrix_Module.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java_Learning.iml" filepath="$PROJECT_DIR$/Java_Learning.iml" />
       <module fileurl="file://$PROJECT_DIR$/Provider_Module/Provider_Module.iml" filepath="$PROJECT_DIR$/Provider_Module/Provider_Module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Provider_Replicas_Mail_Module/Provider_Replicas_Mail_Module.iml" filepath="$PROJECT_DIR$/Provider_Replicas_Mail_Module/Provider_Replicas_Mail_Module.iml" />
       <module fileurl="file://$PROJECT_DIR$/Provider_Replicas_Module/Provider_Replicas_Module.iml" filepath="$PROJECT_DIR$/Provider_Replicas_Module/Provider_Replicas_Module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring_Boot_Admin_Module/Spring_Boot_Admin_Module.iml" filepath="$PROJECT_DIR$/Spring_Boot_Admin_Module/Spring_Boot_Admin_Module.iml" />
       <module fileurl="file://$PROJECT_DIR$/Zuul_API_Module/Zuul_API_Module.iml" filepath="$PROJECT_DIR$/Zuul_API_Module/Zuul_API_Module.iml" />
     </modules>
   </component>

@@ -10,7 +10,11 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>Eureka_Manager_Replicas_Module</artifactId>
     <properties>
-        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+        <java.version>11</java.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <spring.cloud.netflix.ribbon-version>2.2.4.RELEASE</spring.cloud.netflix.ribbon-version>
         <spring.cloud.netflix.hystrix-version>2.2.2.RELEASE</spring.cloud.netflix.hystrix-version>
         <jersey-apache-client4>1.19.4</jersey-apache-client4>
@@ -57,7 +61,10 @@
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
             <version>${spring.cloud.netflix.hystrix-version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
     </dependencies>
 
 

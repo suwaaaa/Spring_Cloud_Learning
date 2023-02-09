@@ -1,4 +1,4 @@
-package JPAPrividerApp.Repository;
+package com.JPAPrividerApp.Repository;
 
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Component;

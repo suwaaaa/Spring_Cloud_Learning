@@ -10,9 +10,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 //使用Feign的客服端注解绑定远程的服务   该远程服务名字可以是大写也可以是小写   当fallback和fallbackFactory同时配置时，生效的为fallback
 @FeignClient(name = "SPRING-CLOUD-EUREKA-PROVIDER-01",/*fallback=MyFallBack.class*/ fallbackFactory = MyFallBackFactory.class
 ,configuration = FileRequestConfig.class)  // 使用Feign实现服务熔断

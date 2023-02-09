@@ -3,8 +3,18 @@
 * 收费：Squaretest(30 days for free)，  免费：TestMe
 *
 * 自定义注解使用：类注释：创建类的时候自动生成 方法注释：使用/**+Tab键
+*
+* Github 上传失败 原因之一： 没有配置公开密钥到github
+*
+* 1、18 JPA Learning
+* refer:
+* https://blog.csdn.net/Yuncoco/article/details/92574137?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167393555916800192251858%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=167393555916800192251858&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~baidu_landing_v2~default-4-92574137-null-null.142^v71^control,201^v4^add_ask&utm_term=JPQL&spm=1018.2226.3001.4187
+* https://blog.csdn.net/suncaishen/article/details/6512028?spm=1001.2101.3001.6650.13&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-13-6512028-blog-103017261.pc_relevant_aa&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-13-6512028-blog-103017261.pc_relevant_aa&utm_relevant_index=14
+*https://blog.csdn.net/qq_27886997/article/details/84969207?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-84969207-blog-78780147.pc_relevant_recovery_v2&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-84969207-blog-78780147.pc_relevant_recovery_v2&utm_relevant_index=1
+* https://janus.blog.csdn.net/article/details/78780147?spm=1001.2101.3001.6650.14&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-14-78780147-blog-103017261.pc_relevant_aa&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-14-78780147-blog-103017261.pc_relevant_aa&utm_relevant_index=15
+* https://blog.csdn.net/qq_41574004/article/details/103017261?spm=1001.2101.3001.6650.14&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-14-103017261-blog-80001826.pc_relevant_aa&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-14-103017261-blog-80001826.pc_relevant_aa&utm_relevant_index=18
+* https://blog.csdn.net/dtttyc/article/details/80001826?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167393555916800192251858%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=167393555916800192251858&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-2-80001826-null-null.142^v71^control,201^v4^add_ask&utm_term=JPQL&spm=1018.2226.3001.4187
 * */
-
 
 /*JPA Repository
 * 1.方法名称命名规则查询
@@ -130,3 +140,14 @@ List<Object[]> results=(List<Object[]>)query.getResultList();
 for(Object[] row:results){
 row[0],row[1]
 }*/
+
+/*
+解决端口号(port)被占的问题
+Linux:
+netstat  -anp  |grep 8000
+kill -9  进程ID
+
+Windows:
+netstat -ano|findstr 8000
+taskkill /pid 7912 /f
+*/

@@ -1,4 +1,4 @@
-package JPAPrividerApp.Entity;
+package com.JPAPrividerApp.Entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
