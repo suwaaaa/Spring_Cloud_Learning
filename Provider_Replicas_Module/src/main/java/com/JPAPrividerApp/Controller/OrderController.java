@@ -1,10 +1,16 @@
 package com.JPAPrividerApp.Controller;
 
 import com.JPAPrividerApp.Async.AsyncTaskImp.OrderAsyncTaskImp;
+import org.springframework.beans.BeanWrapper;
+import org.springframework.beans.MutablePropertyValues;
+import org.springframework.beans.PropertyAccessorFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.CyclicBarrier;
 
 /**
  * Java_IBM_Learning com.JPAPrividerApp.Controller
@@ -23,10 +29,14 @@ public class OrderController {
     }
 
 
-    @Scheduled(cron = "0 0 0 9 2 *")
+    @Scheduled(cron = "0 10 18 * 2 *")
     public void callAsyncThreadPoolMethod(){
-        Integer orderNumber = 1000;
-        orderAsyncTaskImp.setThreadNum(4);
+        Integer orderNumber = 500;
+        String property = "threadNum";
+        MutablePropertyValues pvs = new MutablePropertyValues();
+        pvs.add(property, 6);//TODO  修改Bean的属性值
+        BeanWrapper wrapper = PropertyAccessorFactory.forBeanPropertyAccess(this.orderAsyncTaskImp);
+        wrapper.setPropertyValues(pvs);
         orderAsyncTaskImp.takenOrderByThreadPool(orderNumber);
     }
 

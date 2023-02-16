@@ -1,6 +1,8 @@
 package com.JPAPrividerApp.Async.AsyncTaskImp;
 
 import com.JPAPrividerApp.Async.AsyncTask;
+import lombok.Data;
+import lombok.experimental.Accessors;
 import org.springframework.stereotype.Component;
 
 import javax.validation.constraints.NotNull;
@@ -14,16 +16,12 @@ import java.util.concurrent.*;
  * @description
  */
 @Component
+@Data
 public class OrderAsyncTaskImp {
 
-    @NotNull
-    private int threadNum = 0;    //模拟多个线程
-
-    public void setThreadNum(int threadNum) {
-        this.threadNum = threadNum;
-    }
-    private final CyclicBarrier cyclicBarrier = new CyclicBarrier(threadNum);
-    private final CountDownLatch countDownLatch = new CountDownLatch(threadNum);  // 用于统计 执行时长
+    private Integer threadNum = 4;    //模拟多个线程
+    private CyclicBarrier cyclicBarrier = new CyclicBarrier(threadNum);
+    private CountDownLatch countDownLatch = new CountDownLatch(threadNum);  // 用于统计 执行时长
     private AsyncTask orderPool = new AsyncTask(countDownLatch, cyclicBarrier);
     private ExecutorService executorService = Executors.newFixedThreadPool(threadNum);
 

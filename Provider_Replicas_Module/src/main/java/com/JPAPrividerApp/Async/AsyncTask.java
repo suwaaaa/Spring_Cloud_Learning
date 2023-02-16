@@ -32,7 +32,7 @@ public class AsyncTask implements Runnable {  //    模拟处理1000个订单
         synchronized (lockAtObject){
             if (orderNum > 0){
                 orderNum --;
-                System.out.println("当前线程 " + Thread.currentThread().getName() + " 处理完订单， 剩余订单-" + orderNum);
+                System.out.println("当前线程 " + Thread.currentThread().getName() + " 处理完订单， 剩余订单:" + orderNum);
             }else { System.out.println("当前所有订单全部处理完毕!");}
         }
         try {
