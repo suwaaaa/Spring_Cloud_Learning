@@ -36,4 +36,49 @@ public class SpringSecurityActuatorConfig extends WebSecurityConfigurerAdapter {
                 // 放行provider02请求
 //                .authorizeRequests().anyRequest().permitAll();
     }
+
+    /*@Configuration
+public class MySecurityConfig extends WebSecurityConfigurerAdapter {
+
+    private final AdminServerProperties adminServer;
+
+    private final SecurityProperties security;
+
+    public MySecurityConfig(AdminServerProperties adminServer, SecurityProperties security) {
+        this.adminServer = adminServer;
+        this.security = security;
+    }
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        SavedRequestAwareAuthenticationSuccessHandler successHandler = new SavedRequestAwareAuthenticationSuccessHandler();
+        successHandler.setTargetUrlParameter("redirectTo");
+        successHandler.setDefaultTargetUrl(this.adminServer.path("/"));
+
+        http.authorizeRequests(
+                (authorizeRequests) -> authorizeRequests.antMatchers(this.adminServer.path("/assets/**")).permitAll()
+                        .antMatchers(this.adminServer.path("/actuator/info")).permitAll()
+                        .antMatchers(this.adminServer.path("/actuator/health")).permitAll()
+                        .antMatchers(this.adminServer.path("/login")).permitAll().anyRequest().authenticated()
+        ).formLogin(
+                (formLogin) -> formLogin.loginPage(this.adminServer.path("/login")).successHandler(successHandler).and()
+        ).logout((logout) -> logout.logoutUrl(this.adminServer.path("/logout"))).httpBasic(Customizer.withDefaults())
+                .csrf((csrf) -> csrf.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
+                        .ignoringRequestMatchers(
+                                new AntPathRequestMatcher(this.adminServer.path("/instances"),
+                                        HttpMethod.POST.toString()),
+                                new AntPathRequestMatcher(this.adminServer.path("/instances/*"),
+                                        HttpMethod.DELETE.toString()),
+                                new AntPathRequestMatcher(this.adminServer.path("/actuator/**"))
+                        ))
+                .rememberMe((rememberMe) -> rememberMe.key(UUID.randomUUID().toString()).tokenValiditySeconds(1209600));
+    }
+
+    // Required to provide UserDetailsService for "remember functionality"
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.inMemoryAuthentication().withUser(security.getUser().getName())
+                .password("{noop}" + security.getUser().getPassword()).roles("USER");
+    }
+}*/
 }
