@@ -19,6 +19,7 @@
         <module>Provider_Replicas_Module</module>
         <module>Provider_Replicas_Mail_Module</module>
         <module>Spring_Boot_Admin_Module</module>
+        <module>Spring_Gateway_Module</module>
     </modules>
     <!--<packaging>pom</packaging>--><!--java -jar target/gs-uploading-files-0.1.0.jar-->
 

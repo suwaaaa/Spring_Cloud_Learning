@@ -16,6 +16,7 @@
         <module name="Provider_Replicas_Mail_Module" />
         <module name="Provider_Replicas_Module" />
         <module name="Spring_Boot_Admin_Module" />
+        <module name="Spring_Gateway_Module" />
         <module name="Zuul_API_Module" />
       </profile>
     </annotationProcessing>
@@ -30,6 +31,7 @@
       <module name="Provider_Replicas_Mail_Module" target="11" />
       <module name="Provider_Replicas_Module" target="8" />
       <module name="Spring_Boot_Admin_Module" target="11" />
+      <module name="Spring_Gateway_Module" target="11" />
       <module name="Zuul_API_Module" target="11" />
     </bytecodeTargetLevel>
   </component>

@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/Provider_Replicas_Mail_Module/Provider_Replicas_Mail_Module.iml" filepath="$PROJECT_DIR$/Provider_Replicas_Mail_Module/Provider_Replicas_Mail_Module.iml" />
       <module fileurl="file://$PROJECT_DIR$/Provider_Replicas_Module/Provider_Replicas_Module.iml" filepath="$PROJECT_DIR$/Provider_Replicas_Module/Provider_Replicas_Module.iml" />
       <module fileurl="file://$PROJECT_DIR$/Spring_Boot_Admin_Module/Spring_Boot_Admin_Module.iml" filepath="$PROJECT_DIR$/Spring_Boot_Admin_Module/Spring_Boot_Admin_Module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring_Gateway_Module/Spring_Gateway_Module.iml" filepath="$PROJECT_DIR$/Spring_Gateway_Module/Spring_Gateway_Module.iml" />
       <module fileurl="file://$PROJECT_DIR$/Zuul_API_Module/Zuul_API_Module.iml" filepath="$PROJECT_DIR$/Zuul_API_Module/Zuul_API_Module.iml" />
     </modules>
   </component>
