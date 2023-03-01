@@ -1,16 +1,13 @@
 package com.JPAPrividerApp.Controller;
 
-import com.JPAPrividerApp.Async.AsyncTaskImp.OrderAsyncTaskImp;
-import org.springframework.beans.BeanWrapper;
-import org.springframework.beans.MutablePropertyValues;
-import org.springframework.beans.PropertyAccessorFactory;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.JPAPrividerApp.Async.AsyncTask;
+import com.JPAPrividerApp.Entity.OrderAsyncTask;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.CyclicBarrier;
+import java.util.concurrent.Executors;
 
 /**
  * Java_IBM_Learning com.JPAPrividerApp.Controller
@@ -21,23 +18,17 @@ import java.util.concurrent.CyclicBarrier;
  */
 @Controller
 public class OrderController {
-    private final OrderAsyncTaskImp orderAsyncTaskImp;
 
-    @Autowired
-    public OrderController(OrderAsyncTaskImp orderAsyncTaskImp) {
-        this.orderAsyncTaskImp = orderAsyncTaskImp;
-    }
-
-
-    @Scheduled(cron = "0 10 18 * 2 *")
+    @Scheduled(cron = "0 3 18 * 2 *")
     public void callAsyncThreadPoolMethod(){
         Integer orderNumber = 500;
-        String property = "threadNum";
-        MutablePropertyValues pvs = new MutablePropertyValues();
-        pvs.add(property, 6);//TODO  修改Bean的属性值
-        BeanWrapper wrapper = PropertyAccessorFactory.forBeanPropertyAccess(this.orderAsyncTaskImp);
-        wrapper.setPropertyValues(pvs);
-        orderAsyncTaskImp.takenOrderByThreadPool(orderNumber);
+        OrderAsyncTask orderAsyncTask = new OrderAsyncTask();
+        Integer threadNum = 4;
+        orderAsyncTask.setThreadNum(threadNum)
+                .setOrderPool(new AsyncTask(new CountDownLatch(threadNum),
+                        new CyclicBarrier(threadNum)))
+                .setExecutorService(Executors.newFixedThreadPool(threadNum));
+        orderAsyncTask.takenOrderByThreadPool(orderNumber);
     }
 
 }

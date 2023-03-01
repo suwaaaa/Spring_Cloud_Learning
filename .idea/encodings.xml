@@ -1,16 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Consumer_Module" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Consumer_Module/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Consumer_Module/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Eureka_Manager_Module" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Eureka_Manager_Module/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Eureka_Manager_Module/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Eureka_Manager_Replicas_Module" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Eureka_Manager_Replicas_Module/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Eureka_Manager_Replicas_Module/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Feign_Module" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Feign_Module/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Feign_Module/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Hystrix_Module" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Hystrix_Module/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Hystrix_Module/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Provider_Module" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Provider_Module/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Provider_Module/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Provider_Replicas_Mail_Module" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Provider_Replicas_Mail_Module/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Provider_Replicas_Mail_Module/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Provider_Replicas_Module" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Provider_Replicas_Module/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Provider_Replicas_Module/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Spring_Boot_Admin_Module" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring_Boot_Admin_Module/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring_Boot_Admin_Module/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Zuul_API_Module" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Zuul_API_Module/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Zuul_API_Module/src/main/resources" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

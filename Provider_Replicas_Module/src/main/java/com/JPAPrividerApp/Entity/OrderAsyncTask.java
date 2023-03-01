@@ -1,10 +1,11 @@
-package com.JPAPrividerApp.Async.AsyncTaskImp;
+package com.JPAPrividerApp.Entity;
 
 import com.JPAPrividerApp.Async.AsyncTask;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
-import org.springframework.stereotype.Component;
 
+import javax.persistence.Access;
 import javax.validation.constraints.NotNull;
 import java.util.concurrent.*;
 
@@ -15,15 +16,16 @@ import java.util.concurrent.*;
  * @createTime 2023/2/9 17:58
  * @description
  */
-@Component
+@NoArgsConstructor
 @Data
-public class OrderAsyncTaskImp {
+@Accessors(chain = true)
+public class OrderAsyncTask {
 
-    private Integer threadNum = 4;    //模拟多个线程
-    private CyclicBarrier cyclicBarrier = new CyclicBarrier(threadNum);
-    private CountDownLatch countDownLatch = new CountDownLatch(threadNum);  // 用于统计 执行时长
-    private AsyncTask orderPool = new AsyncTask(countDownLatch, cyclicBarrier);
-    private ExecutorService executorService = Executors.newFixedThreadPool(threadNum);
+    private Integer threadNum = 1;    //模拟多个线程
+    private CyclicBarrier cyclicBarrier;
+    private CountDownLatch countDownLatch;  // 用于统计 执行时长
+    private AsyncTask orderPool;
+    private ExecutorService executorService;
 
     public void takenOrderByThreadPool(@NotNull Integer orderNumber){
         AsyncTask.setOrderNum(orderNumber);
