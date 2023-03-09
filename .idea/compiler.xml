@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Consumer_Module" />
+        <module name="Consumer_Replicas_Module" />
         <module name="Eureka_Manager_Module" />
         <module name="Eureka_Manager_Replicas_Module" />
         <module name="Feign_Module" />
@@ -20,13 +21,14 @@
         <module name="Zuul_API_Module" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="11">
+    <bytecodeTargetLevel>
       <module name="Consumer_Module" target="11" />
+      <module name="Consumer_Replicas_Module" target="11" />
       <module name="Eureka_Manager_Module" target="11" />
       <module name="Eureka_Manager_Replicas_Module" target="11" />
       <module name="Feign_Module" target="11" />
       <module name="Hystrix_Module" target="11" />
-      <module name="Java_Learning" target="11" />
+      <module name="Java_IBM_Learning" target="11" />
       <module name="Provider_Module" target="8" />
       <module name="Provider_Replicas_Mail_Module" target="11" />
       <module name="Provider_Replicas_Module" target="8" />

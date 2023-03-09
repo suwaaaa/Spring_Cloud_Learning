@@ -3,11 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Consumer_Module/Consumer_Module.iml" filepath="$PROJECT_DIR$/Consumer_Module/Consumer_Module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Consumer_Replicas_Module/Consumer_Replicas_Module.iml" filepath="$PROJECT_DIR$/Consumer_Replicas_Module/Consumer_Replicas_Module.iml" />
       <module fileurl="file://$PROJECT_DIR$/Eureka_Manager_Module/Eureka_Manager_Module.iml" filepath="$PROJECT_DIR$/Eureka_Manager_Module/Eureka_Manager_Module.iml" />
       <module fileurl="file://$PROJECT_DIR$/Eureka_Manager_Replicas_Module/Eureka_Manager_Replicas_Module.iml" filepath="$PROJECT_DIR$/Eureka_Manager_Replicas_Module/Eureka_Manager_Replicas_Module.iml" />
       <module fileurl="file://$PROJECT_DIR$/Feign_Module/Feign_Module.iml" filepath="$PROJECT_DIR$/Feign_Module/Feign_Module.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hystrix_Module/Hystrix_Module.iml" filepath="$PROJECT_DIR$/Hystrix_Module/Hystrix_Module.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Java_Learning.iml" filepath="$PROJECT_DIR$/Java_Learning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Java_IBM_Learning.iml" filepath="$PROJECT_DIR$/.idea/Java_IBM_Learning.iml" />
       <module fileurl="file://$PROJECT_DIR$/Provider_Module/Provider_Module.iml" filepath="$PROJECT_DIR$/Provider_Module/Provider_Module.iml" />
       <module fileurl="file://$PROJECT_DIR$/Provider_Replicas_Mail_Module/Provider_Replicas_Mail_Module.iml" filepath="$PROJECT_DIR$/Provider_Replicas_Mail_Module/Provider_Replicas_Mail_Module.iml" />
       <module fileurl="file://$PROJECT_DIR$/Provider_Replicas_Module/Provider_Replicas_Module.iml" filepath="$PROJECT_DIR$/Provider_Replicas_Module/Provider_Replicas_Module.iml" />
