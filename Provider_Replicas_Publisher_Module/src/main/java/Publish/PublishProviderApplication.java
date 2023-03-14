@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  * @author 12645
  * @createTime 2023/3/14 17:03
- * @description
+ * @description  Rabbit MQ link: http://192.168.3.128:15672/#/exchanges (Should oprn Vmware 15 Pro and running CentOS 7 Docker)
  */
 
 @SpringBootApplication
