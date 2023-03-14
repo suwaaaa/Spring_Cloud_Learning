@@ -21,8 +21,17 @@
         <module>Spring_Boot_Admin_Module</module>
         <module>Spring_Gateway_Module</module>
         <module>Consumer_Replicas_Module</module>
+        <module>Provider_Replicas_Publisher_Module</module>
+        <module>Consumer_Replicas_Consume_Module</module>
     </modules>
     <!--<packaging>pom</packaging>--><!--java -jar target/gs-uploading-files-0.1.0.jar-->
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.9.RELEASE</version>
+        <relativePath/>
+    </parent>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

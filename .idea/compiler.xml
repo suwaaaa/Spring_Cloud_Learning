@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Consumer_Module" />
+        <module name="Consumer_Replicas_Consume_Module" />
         <module name="Consumer_Replicas_Module" />
         <module name="Eureka_Manager_Module" />
         <module name="Eureka_Manager_Replicas_Module" />
@@ -16,6 +17,7 @@
         <module name="Provider_Module" />
         <module name="Provider_Replicas_Mail_Module" />
         <module name="Provider_Replicas_Module" />
+        <module name="Provider_Replicas_Publisher_Module" />
         <module name="Spring_Boot_Admin_Module" />
         <module name="Spring_Gateway_Module" />
         <module name="Zuul_API_Module" />
@@ -23,6 +25,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Consumer_Module" target="11" />
+      <module name="Consumer_Replicas_Consume_Module" target="11" />
       <module name="Consumer_Replicas_Module" target="11" />
       <module name="Eureka_Manager_Module" target="11" />
       <module name="Eureka_Manager_Replicas_Module" target="11" />
@@ -32,9 +35,28 @@
       <module name="Provider_Module" target="8" />
       <module name="Provider_Replicas_Mail_Module" target="11" />
       <module name="Provider_Replicas_Module" target="8" />
+      <module name="Provider_Replicas_Publisher_Module" target="11" />
       <module name="Spring_Boot_Admin_Module" target="11" />
       <module name="Spring_Gateway_Module" target="11" />
       <module name="Zuul_API_Module" target="11" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Consumer_Module" options="-parameters" />
+      <module name="Consumer_Replicas_Consume_Module" options="-parameters" />
+      <module name="Consumer_Replicas_Module" options="-parameters" />
+      <module name="Eureka_Manager_Module" options="-parameters" />
+      <module name="Eureka_Manager_Replicas_Module" options="-parameters" />
+      <module name="Feign_Module" options="-parameters" />
+      <module name="Hystrix_Module" options="-parameters" />
+      <module name="Provider_Module" options="-parameters" />
+      <module name="Provider_Replicas_Mail_Module" options="-parameters" />
+      <module name="Provider_Replicas_Module" options="-parameters" />
+      <module name="Provider_Replicas_Publisher_Module" options="-parameters" />
+      <module name="Spring_Boot_Admin_Module" options="-parameters" />
+      <module name="Spring_Gateway_Module" options="-parameters" />
+      <module name="Zuul_API_Module" options="-parameters" />
+    </option>
   </component>
 </project>
