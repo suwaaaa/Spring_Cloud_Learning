@@ -15,6 +15,7 @@
         <module name="Feign_Module" />
         <module name="Hystrix_Module" />
         <module name="Provider_Module" />
+        <module name="Provider_Replicas_Elasticsearch_Module" />
         <module name="Provider_Replicas_Mail_Module" />
         <module name="Provider_Replicas_Module" />
         <module name="Provider_Replicas_Publisher_Module" />
@@ -33,6 +34,7 @@
       <module name="Hystrix_Module" target="11" />
       <module name="Java_IBM_Learning" target="11" />
       <module name="Provider_Module" target="8" />
+      <module name="Provider_Replicas_Elasticsearch_Module" target="11" />
       <module name="Provider_Replicas_Mail_Module" target="11" />
       <module name="Provider_Replicas_Module" target="8" />
       <module name="Provider_Replicas_Publisher_Module" target="11" />
@@ -51,6 +53,7 @@
       <module name="Feign_Module" options="-parameters" />
       <module name="Hystrix_Module" options="-parameters" />
       <module name="Provider_Module" options="-parameters" />
+      <module name="Provider_Replicas_Elasticsearch_Module" options="-parameters" />
       <module name="Provider_Replicas_Mail_Module" options="-parameters" />
       <module name="Provider_Replicas_Module" options="-parameters" />
       <module name="Provider_Replicas_Publisher_Module" options="-parameters" />

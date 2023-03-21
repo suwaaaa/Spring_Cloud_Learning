@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/Hystrix_Module/Hystrix_Module.iml" filepath="$PROJECT_DIR$/Hystrix_Module/Hystrix_Module.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Java_IBM_Learning.iml" filepath="$PROJECT_DIR$/.idea/Java_IBM_Learning.iml" />
       <module fileurl="file://$PROJECT_DIR$/Provider_Module/Provider_Module.iml" filepath="$PROJECT_DIR$/Provider_Module/Provider_Module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Provider_Replicas_Elasticsearch_Module/Provider_Replicas_Elasticsearch_Module.iml" filepath="$PROJECT_DIR$/Provider_Replicas_Elasticsearch_Module/Provider_Replicas_Elasticsearch_Module.iml" />
       <module fileurl="file://$PROJECT_DIR$/Provider_Replicas_Mail_Module/Provider_Replicas_Mail_Module.iml" filepath="$PROJECT_DIR$/Provider_Replicas_Mail_Module/Provider_Replicas_Mail_Module.iml" />
       <module fileurl="file://$PROJECT_DIR$/Provider_Replicas_Module/Provider_Replicas_Module.iml" filepath="$PROJECT_DIR$/Provider_Replicas_Module/Provider_Replicas_Module.iml" />
       <module fileurl="file://$PROJECT_DIR$/Provider_Replicas_Publisher_Module/Provider_Replicas_Publisher_Module.iml" filepath="$PROJECT_DIR$/Provider_Replicas_Publisher_Module/Provider_Replicas_Publisher_Module.iml" />

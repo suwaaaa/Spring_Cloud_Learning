@@ -23,6 +23,7 @@
         <module>Consumer_Replicas_Module</module>
         <module>Provider_Replicas_Publisher_Module</module>
         <module>Consumer_Replicas_Consume_Module</module>
+        <module>Provider_Replicas_Elasticsearch_Module</module>
     </modules>
     <!--<packaging>pom</packaging>--><!--java -jar target/gs-uploading-files-0.1.0.jar-->
 

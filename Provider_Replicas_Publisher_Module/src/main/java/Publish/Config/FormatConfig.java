@@ -16,6 +16,11 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class FormatConfig {
 
+    /*
+    *解决Rabbit MQ 中，发送队列中，生产者发送Long 类型到队列， 消费者拿到不同值的Long 数值的问题：
+    * 1. 修改JSON 在分布式传输中 对象序列化不同的问题
+    * 2. 需要同时修改数据库 字符集&characterEncoding=utf-8 解决保存乱码问题
+    */
     @Bean
     public MessageConverter messageConverter(){
         return new Jackson2JsonMessageConverter();

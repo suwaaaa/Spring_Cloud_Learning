@@ -1,0 +1,32 @@
+server:
+  port: 8089
+
+
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.3.128:3306/mysql?useSSL=false&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123
+
+  #虚拟机Vmware CentOS 7 下的 NAT 连接 IP
+  rabbitmq:
+    host: 192.168.3.128
+    username: Javon
+    password: 12345
+    virtual-host: /
+    port: 5672
+
+#logging:
+#  level: debug
+#  pattern:
+#    dateformat: MM-dd HH:mm:ss:SSS
+
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: ESApplication.Pojo
+
+
+
