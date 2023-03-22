@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.alibaba.cloud:sentinel-datasource-nacos:unknown">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/cloud/sentinel-datasource-nacos/unknown/sentinel-datasource-nacos-unknown.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/cloud/sentinel-datasource-nacos/unknown/sentinel-datasource-nacos-unknown-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/cloud/sentinel-datasource-nacos/unknown/sentinel-datasource-nacos-unknown-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

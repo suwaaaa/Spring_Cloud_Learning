@@ -7,15 +7,15 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848
-    gateway:
-      routes:
-        -  id: Spring-Cloud-Eureka-Provider-02-Router
-           uri: lb://Spring-Cloud-Eureka-Provider-02
-           predicates:
-             -  Path= /provider02/**
-             -  After= 2023-01-20T17:42:48.433+08:00[Asia/Shanghai]
-           filters:
-             -  AddRequestHeader= gateway server router add request header here
-      default-filters: #默认过滤器，对所有的路由请求生效
-        -  AddRequestHeader=add request header here
+        server-addr: localhost:8848 # nacos服务地址
+#    gateway:
+#      routes:
+#        -  id: Spring-Cloud-Eureka-Provider-02-Router
+#           uri: lb://Spring-Cloud-Eureka-Provider-02
+#           predicates:
+#             -  Path= /provider02/**
+#             -  After= 2023-01-20T17:42:48.433+08:00[Asia/Shanghai]
+#           filters:
+#             -  AddRequestHeader= request, gateway server router add request header here
+#      default-filters: #默认过滤器，对所有的路由请求生效
+#        -  AddRequestHeader=origin, add request header here

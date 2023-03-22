@@ -35,10 +35,8 @@ public class MessageListener {
             value = @Queue(name = HotelMqConstants.INSERT_QUEUE_NAME),
             key = HotelMqConstants.INSERT_KEY))
     public void syncInsertDataFromMySQL(Long dataId){
-        System.out.println(dataId.toString() + " need to Insert");
-        if (dataId != 51){
-            hotelService.insertDataById(dataId);
-        }
+        System.out.println(dataId.toString() + " need Insert Queue");
+        hotelService.insertDataById(dataId);
 
     }
 
@@ -47,7 +45,7 @@ public class MessageListener {
             value = @Queue(name = HotelMqConstants.DELETE_QUEUE_NAME),
             key = HotelMqConstants.DELETE_KEY))
     public void syncDeleteDataFromMySQL(Long dataId){
-        System.out.println(dataId + " need to Delete");
+        System.out.println(dataId + " need Delete Queue");
         hotelService.deleteDataById(dataId);
     }
 }
