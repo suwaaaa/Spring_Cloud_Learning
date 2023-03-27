@@ -18,9 +18,9 @@
 // Provider_Replicas_Mail_Module 9040 (To Eureka. QQ Mail Server, Spring Admin)
 
 // Spring_Gateway_Module 10000 (To Nacos)
-// Consumer_Replicas_Consume_Module  8084 (Connect RabbitMQ)(To Nacos, Sentinel)
-// Provider_Replicas_Elasticsearch_Module 8089 (Connect RabbitMQ, MySQL, Elasticsearch)(To Nacos, Sentinel)
-// Provider_Replicas_Publisher_Module 8099 (Connect RabbitMQ, MySQL)(To Nacos, Sentinel)
+// Consumer_Replicas_Consume_Module  8199 (Connect RabbitMQ)(To Nacos, Sentinel, Seata)
+// Provider_Replicas_Elasticsearch_Module 8089 (Connect RabbitMQ, MySQL, Elasticsearch)(To Nacos, Sentinel, Seata)
+// Provider_Replicas_Publisher_Module 8099 (Connect RabbitMQ, MySQL)(To Nacos, Sentinel, Seata)
 
 // Spring_Boot_Admin_Module 8995 (To Spring Admin)
 // Hystrix_Module 9040

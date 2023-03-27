@@ -213,6 +213,5 @@
     <orderEntry type="library" name="Maven: com.alibaba.csp:sentinel-cluster-client-default:1.8.0" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba.cloud:spring-cloud-alibaba-sentinel-datasource:2.2.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: com.alibaba.cloud:spring-cloud-alibaba-commons:2.2.5.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: com.alibaba.cloud:sentinel-datasource-nacos:unknown" level="project" />
   </component>
 </module>

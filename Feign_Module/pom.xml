@@ -74,10 +74,11 @@
             <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
             <version>2.2.5.RELEASE</version>
         </dependency>
-        <dependency>
+        <!--sentinel-datasource-nacos 是Sentinel 持久化规则依赖-->
+        <!--<dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>sentinel-datasource-nacos</artifactId>
-        </dependency>
+        </dependency>-->
 
     </dependencies>
     <dependencyManagement>

@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "feign.Consumer_Replicas_Consume.ribbon.NFLoadBalanceRuleClassName",
+      "type": "java.lang.String",
+      "description": "Description for feign.Consumer_Replicas_Consume.ribbon.NFLoadBalanceRuleClassName."
+  }
+] }

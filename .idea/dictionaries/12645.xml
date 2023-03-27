@@ -5,6 +5,7 @@
       <w>kibana</w>
       <w>nacos</w>
       <w>projectlombok</w>
+      <w>seata</w>
       <w>vmware</w>
     </words>
   </dictionary>

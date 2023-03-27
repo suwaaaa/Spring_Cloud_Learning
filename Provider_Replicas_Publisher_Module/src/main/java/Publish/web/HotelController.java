@@ -4,6 +4,7 @@ import Publish.constants.HotelMqConstants;
 import Publish.pojo.Hotel;
 import Publish.pojo.PageResult;
 import Publish.service.IHotelService;
+import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -64,5 +65,16 @@ public class HotelController {
 
         // 发送MQ消息
         rabbitTemplate.convertAndSend(HotelMqConstants.EXCHANGE_NAME, HotelMqConstants.DELETE_KEY, id);
+    }
+
+
+    @GetMapping("/onlySearch")
+    public Hotel searchXA(){
+        return hotelService.list().get(0);
+    }
+
+    @PostMapping("/postSearch")
+    public String postSearchXA (@RequestBody Hotel hotel){
+        return JSON.toJSONString(hotelService.saveOrUpdate(hotel));
     }
 }
