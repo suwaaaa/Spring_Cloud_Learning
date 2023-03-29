@@ -1,4 +1,4 @@
-package Consume.Component;
+package Consume.Component.Listener;
 
 import org.springframework.amqp.core.ExchangeTypes;
 import org.springframework.amqp.rabbit.annotation.Exchange;
@@ -40,27 +40,27 @@ public class ConsumerRabbitListener {
     }
 
 
-
-    @RabbitListener(queues = "Fanout-Consume1")//发布订阅 -- FanoutExchange
+    //为了测试 消费确认测试 & 失败重试机制测试，注释以下两个
+/*    @RabbitListener(queues = "Fanout-Consume1")//发布订阅 -- FanoutExchange
     public void listenPublishQueueMessage1(String message) {
         System.out.println("Consumer Message Server 'Fanout-Consume1' listen message > " + message);
     }
     @RabbitListener(queues = "Fanout-Consume2")//发布订阅 -- FanoutExchange
     public void listenPublishQueueMessage2(String message) {
         System.out.println("Consumer Message Server 'Fanout-Consume2' listen message > " + message);
-    }
+    }*/
 
 
     @RabbitListener(bindings = @QueueBinding(//发布订阅 -- Direct Exchange
                                     value = @Queue(name = "Direct-Consumer1"),
-                                    exchange = @Exchange(name = "Direct-Publish-Consume",type = ExchangeTypes.DIRECT),
+                                    exchange = @Exchange(name = "Direct-Publish-Consume"),
                                     key = {"user1","user4","user5"}))//
     public void listenDirectQueueMessage1(String message) {
         System.out.println("Consumer Message Server 'Direct-Consume1' listen message - " + message);
     }
     @RabbitListener(bindings = @QueueBinding(//发布订阅 -- Direct Exchange
                                     value = @Queue(name = "Direct-Consumer2"),
-                                    exchange = @Exchange(name = "Direct-Publish-Consume",type = ExchangeTypes.DIRECT),
+                                    exchange = @Exchange(name = "Direct-Publish-Consume"),
                                     key = {"user2","user3","user5"}))//
     public void listenDirectQueueMessage2(String message) {
         System.out.println("Consumer Message Server 'Direct-Consume2' listen message - " + message);
@@ -84,4 +84,16 @@ public class ConsumerRabbitListener {
     public void listenTopicQueueMessage2(String message){
         System.out.println("Consumer Message Server 'Topic-Consumer2' listen message - " + message);
     }
+
+
+
+
+    @RabbitListener(queues = "Fanout-Consume-Error")//FanoutExchange 消费者 消费确认测试 & 失败重试机制测试
+    public void publisherReturnCallbackTest(String message) {
+        //noinspection NumericOverflow,divzero
+        System.out.println("Error : " + 1/0);//模拟消费者 消费失败的场景
+        System.out.println("publisherReturnCallbackTest 'Fanout-Consume1' > " + message);
+    }
+
+
 }

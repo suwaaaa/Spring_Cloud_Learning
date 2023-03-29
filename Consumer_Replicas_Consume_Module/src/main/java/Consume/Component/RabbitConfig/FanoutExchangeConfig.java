@@ -1,9 +1,6 @@
-package Consume.Component;
+package Consume.Component.RabbitConfig;
 
-import org.springframework.amqp.core.Binding;
-import org.springframework.amqp.core.BindingBuilder;
-import org.springframework.amqp.core.FanoutExchange;
-import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.core.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -18,12 +15,12 @@ import org.springframework.context.annotation.Configuration;
 public class FanoutExchangeConfig {
     @Bean
     public FanoutExchange fanoutExchange(){
-        return new FanoutExchange("Fanout-Publish-Consume");
+        return new FanoutExchange("Fanout-Publish-Consume",true,false );
     }
 
     @Bean
     public Queue fanoutQueue1(){
-        return new Queue("Fanout-Consume1");
+        return QueueBuilder.durable("Fanout-Consume1").build();// ==  return new Queue("Fanout-Consume1",true);
     }
 
     @Bean
@@ -39,5 +36,16 @@ public class FanoutExchangeConfig {
     @Bean
     public Binding fanoutBing2(FanoutExchange fanoutExchange, Queue fanoutQueue2){
         return BindingBuilder.bind(fanoutQueue2).to(fanoutExchange);
+    }
+
+
+    @Bean
+    public Queue errorFanoutQueue(){
+        return new Queue("Fanout-Consume-Error");
+    }
+
+    @Bean
+    public Binding fanoutBing2Error(FanoutExchange fanoutExchange, Queue errorFanoutQueue){
+        return BindingBuilder.bind(errorFanoutQueue).to(fanoutExchange);
     }
 }
